@@ -1,0 +1,130 @@
+body {
+    padding-bottom: 90px; 
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+.space-body {
+    min-height: 100vh;
+    position: relative;
+    color: #fff;
+    background: radial-gradient(circle at bottom, #0a0a1a 0%, #000 100%);
+}
+
+.app-footer {
+   left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 20, 60, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -3px 15px rgba(0, 120, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.app-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 5px #211274;
+}
+
+
+/* Capa base que se usa para fondo  */
+.space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(110, 0, 150, 0.12) center / 250px 250px round;
+    border: 1px dashed rgba(150, 80, 255, 0.3);
+    animation: space-rotate 180s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1; 
+}
+
+
+.space1 {
+    animation-duration: 180s;
+    background-image:
+        radial-gradient(1px 1px at 25px 5px, #fff, transparent),
+        radial-gradient(1px 1px at 50px 25px, #fff, transparent),
+        radial-gradient(1px 1px at 125px 20px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 50px 75px, #fff, transparent),
+        radial-gradient(2px 2px at 15px 125px, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 110px 80px, #fff, transparent);
+}
+
+.space2 {
+    animation-duration: 240s;
+    background-image:
+        radial-gradient(1px 1px at 75px 125px, #fff, transparent),
+        radial-gradient(1px 1px at 100px 75px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 199px 100px, #fff, transparent),
+        radial-gradient(2px 2px at 20px 50px, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 100px 5px, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 5px 5px, #fff, transparent);
+}
+
+.space3 {
+    animation-duration: 300s;
+    background-image:
+        radial-gradient(1px 1px at 10px 10px, #fff, transparent),
+        radial-gradient(1px 1px at 150px 150px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 60px 170px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 175px 180px, #fff, transparent),
+        radial-gradient(2px 2px at 195px 95px, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 95px 145px, #fff, transparent);
+}
+
+/* capa para animar */
+@keyframes space-rotate {
+    40% { opacity: 0.75; }
+    50% { opacity: 0.25; }
+    60% { opacity: 0.75; }
+    100% { transform: rotate(360deg); }
+}
+
+.app-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 20, 60, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -3px 15px rgba(24, 57, 149, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+
+.app-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 5px #132da1;
+}
+
+.app-navbar {
+    background: rgba(0, 10, 40, 0.8) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 140, 255, 0.4);
+    box-shadow: 0 0 15px rgba(11, 55, 116, 0.4);
+}
+
+.app-navbar-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px #5d2669;
+}
+
+div.bg-secondary {
+    background-color: #293256 !important;
+}
+
+.bg-azull {
+    background-color: #4b557d !important;
+
+}
