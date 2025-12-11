@@ -1,130 +1,247 @@
 body {
-    padding-bottom: 90px; 
     margin: 0;
-    overflow-x: hidden;
-    font-family: "Roboto", sans-serif;
-}
-
-.space-body {
-    min-height: 100vh;
-    position: relative;
+    background: #020314;
     color: #fff;
-    background: radial-gradient(circle at bottom, #0a0a1a 0%, #000 100%);
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
-.app-footer {
-   left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 20, 60, 0.8);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 -3px 15px rgba(0, 120, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1000;
+.title {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 20px 0 5px;
+    letter-spacing: 3px;
 }
 
-.app-footer p {
-    margin: 0;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 5px #211274;
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 40px;
 }
 
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px 100px;
+    position: relative;
+    z-index: 5;
+}
 
-/* Capa base que se usa para fondo  */
-.space {
+.viewer-card {
+    width: 65%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(120, 150, 255, 0.25);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    animation: float 8s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.viewer-card::before {
+    content: "";
     position: absolute;
+    top: -30%;
+    left: 50%;
+    width: 160%;
+    height: 160%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(0, 140, 255, 0.25), transparent 70%);
+    filter: blur(90px);
+    z-index: -1;
+}
+
+.viewer-title {
+    font-family: "Orbitron";
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.viewer-date {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.viewer-media img,
+.viewer-media iframe {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.viewer-desc {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-fav {
+    width: 100%;
+    padding: 12px;
+    background: #ffbe0b;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-fav:hover {
+    background: #ffd74a;
+}
+
+.sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.module-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(120, 150, 255, 0.25);
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.module-card::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    width: 130%;
+    height: 130%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(150, 0, 255, 0.25), transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.module-title {
+    font-family: "Orbitron";
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.date-input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(60, 70, 120, 0.3);
+    border: 1px solid rgba(150, 170, 255, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.btn-search {
+    width: 100%;
+    padding: 10px;
+    background: #4cc9f0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-search:hover {
+    background: #74d9ff;
+}
+
+.fav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fav-list li {
+    padding: 10px;
+    background: rgba(120, 140, 255, 0.2);
+    margin: 6px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fav-list li:hover {
+    background: rgba(150, 170, 255, 0.35);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    position: relative;
+    z-index: 5;
+}
+
+#stars, #stars2, #stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(110, 0, 150, 0.12) center / 250px 250px round;
-    border: 1px dashed rgba(150, 80, 255, 0.3);
-    animation: space-rotate 180s ease-in-out infinite;
-    pointer-events: none;
-    z-index: -1; 
+    z-index: -3;
 }
 
-
-.space1 {
-    animation-duration: 180s;
-    background-image:
-        radial-gradient(1px 1px at 25px 5px, #fff, transparent),
-        radial-gradient(1px 1px at 50px 25px, #fff, transparent),
-        radial-gradient(1px 1px at 125px 20px, #fff, transparent),
-        radial-gradient(1.5px 1.5px at 50px 75px, #fff, transparent),
-        radial-gradient(2px 2px at 15px 125px, #fff, transparent),
-        radial-gradient(2.5px 2.5px at 110px 80px, #fff, transparent);
+#stars {
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.4;
 }
 
-.space2 {
-    animation-duration: 240s;
-    background-image:
-        radial-gradient(1px 1px at 75px 125px, #fff, transparent),
-        radial-gradient(1px 1px at 100px 75px, #fff, transparent),
-        radial-gradient(1.5px 1.5px at 199px 100px, #fff, transparent),
-        radial-gradient(2px 2px at 20px 50px, #fff, transparent),
-        radial-gradient(2.5px 2.5px at 100px 5px, #fff, transparent),
-        radial-gradient(2.5px 2.5px at 5px 5px, #fff, transparent);
+#stars2 {
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.25;
+    transform: scale(1.5);
 }
 
-.space3 {
-    animation-duration: 300s;
-    background-image:
-        radial-gradient(1px 1px at 10px 10px, #fff, transparent),
-        radial-gradient(1px 1px at 150px 150px, #fff, transparent),
-        radial-gradient(1.5px 1.5px at 60px 170px, #fff, transparent),
-        radial-gradient(1.5px 1.5px at 175px 180px, #fff, transparent),
-        radial-gradient(2px 2px at 195px 95px, #fff, transparent),
-        radial-gradient(2.5px 2.5px at 95px 145px, #fff, transparent);
+#stars3 {
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.18;
+    transform: scale(2);
 }
 
-/* capa para animar */
-@keyframes space-rotate {
-    40% { opacity: 0.75; }
-    50% { opacity: 0.25; }
-    60% { opacity: 0.75; }
-    100% { transform: rotate(360deg); }
-}
-
-.app-footer {
+.neon-glow {
     position: fixed;
+    top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
-    background: rgba(0, 20, 60, 0.8);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 -3px 15px rgba(24, 57, 149, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1000;
+    height: 100%;
+    pointer-events: none;
+    box-shadow:
+        0 0 80px 30px rgba(0, 120, 255, 0.12) inset,
+        0 0 120px 50px rgba(180, 40, 255, 0.10) inset;
+    z-index: -2;
 }
 
-
-.app-footer p {
-    margin: 0;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 5px #132da1;
+.ambient-light {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(80,0,255,0.35), transparent 70%);
+    transform: translate(-50%, -50%);
+    filter: blur(60px);
+    animation: pulse 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -4;
 }
 
-.app-navbar {
-    background: rgba(0, 10, 40, 0.8) !important;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 140, 255, 0.4);
-    box-shadow: 0 0 15px rgba(11, 55, 116, 0.4);
+@keyframes pulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.8; }
 }
 
-.app-navbar-title {
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-shadow: 0 0 8px #5d2669;
-}
-
-div.bg-secondary {
-    background-color: #293256 !important;
-}
-
-.bg-azull {
-    background-color: #4b557d !important;
-
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
 }
