@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Deep Space Explorer – NASA APOD</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,16 +26,12 @@
     <section class="viewer-card">
         <h2 id="titulo" class="viewer-title"></h2>
         <p id="fecha-apod" class="viewer-date"></p>
-
         <div id="media" class="viewer-media"></div>
-
         <p id="explicacion" class="viewer-desc"></p>
-
         <button id="btn-favorite" class="btn-fav">⭐ Añadir a Favoritos</button>
     </section>
 
     <aside class="sidebar">
-
         <div class="module-card">
             <h3 class="module-title">🔎 Módulo Temporal</h3>
             <input type="date" id="date-input" class="date-input">
@@ -48,17 +42,15 @@
             <h3 class="module-title">⭐ Cápsulas Guardadas</h3>
             <ul id="favorites-list" class="fav-list"></ul>
         </div>
-
     </aside>
 
 </main>
 
 <footer class="footer">
-    <p>Deep Space Explorer — NASA APOD | Proyecto de Juan Felipe & Equipo</p>
+    <p>Deep Space Explorer — NASA APOD | Proyecto Generation</p>
 </footer>
 
-<script src="./app.js"></script>
+<script src="app.js"></script>
 <script type="module" src="localStorage.js"></script>
-
 </body>
 </html>
